@@ -10,13 +10,13 @@ public class Zoo {
     public static void main(String[] args) {
         List<Animal> animals = new ArrayList<>();
 
-        animals.add(new Hippo());
-        animals.add(new Lion());
-        animals.add(new Pig());
-        animals.add(new Tiger());
-        animals.add(new Zebra());
-        animals.add(new Rat());
-        animals.add(new Shark());
+        animals.add(new Hippo("Elsa"));
+        animals.add(new Lion("Henk"));
+        animals.add(new Pig("Dora"));
+        animals.add(new Tiger("Wally"));
+        animals.add(new Zebra("Marty"));
+        animals.add(new Rat("Spencer"));
+        animals.add(new Shark("Carl"));
 
         String[] commands = {"hello", "give leaves", "give meat", "perform trick", "give both"};
 
@@ -31,7 +31,7 @@ public class Zoo {
             }
 
         } else if (input.startsWith("hello ")) {
-            // hello + name of animal(Elsa, Henk, Dora, Wally, Marty)
+            // hello + name of animal
             String name = input.substring(6).toLowerCase();
 
             animals.stream()

@@ -4,13 +4,14 @@ import com.ing.zoo.interfaces.IGreeting;
 
 public class Lion extends Animal implements IGreeting, IEat {
 
-    public Lion() {
+    public Lion(String name) {
+        super(name);
     }
 
-    @Override
-    public String getName() {
-        return "Henk";
-    }
+//    @Override
+//    public String getName() {
+//        return "Henk";
+//    }
 
     public String getDiet() {
         return "carnivore";

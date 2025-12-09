@@ -9,13 +9,15 @@ import java.util.Random;
 public class Pig extends Animal implements IGreeting, IEat, ITrick {
     public String trick;
 
-    public Pig() {
+    public Pig(String name) {
+        super(name);
     }
 
-    @Override
-    public String getName() {
-        return "Dora";
-    }
+
+//    @Override
+//    public String getName() {
+//        return "Dora";
+//    }
 
     @Override
     public String getDiet() {

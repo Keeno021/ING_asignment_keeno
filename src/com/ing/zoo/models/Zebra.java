@@ -5,13 +5,14 @@ import com.ing.zoo.interfaces.IGreeting;
 
 public class Zebra extends Animal implements IGreeting, IEat {
 
-    public Zebra() {
+    public Zebra(String name) {
+        super(name);
     }
 
-    @Override
-    public String getName() {
-        return "Marty";
-    }
+//    @Override
+//    public String getName() {
+//        return "Marty";
+//    }
 
     @Override
     public String getDiet() {

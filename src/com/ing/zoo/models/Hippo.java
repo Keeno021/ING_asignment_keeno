@@ -5,13 +5,14 @@ import com.ing.zoo.interfaces.IGreeting;
 
 public class Hippo extends Animal implements IGreeting, IEat {
 
-    public Hippo() {
+    public Hippo(String name) {
+        super(name);
     }
 
-    @Override
-    public String getName() {
-        return "Elsa";
-    }
+//    @Override
+//    public String getName() {
+//        return "Elsa";
+//    }
 
     public String getDiet() {
         return "herbivore";

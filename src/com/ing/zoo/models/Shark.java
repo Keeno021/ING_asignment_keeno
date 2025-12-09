@@ -4,13 +4,15 @@ import com.ing.zoo.interfaces.IEat;
 import com.ing.zoo.interfaces.IGreeting;
 
 public class Shark extends Animal implements IGreeting, IEat {
-    public Shark() {
+    public Shark(String name) {
+        super(name);
     }
 
-    @Override
-    public String getName() {
-        return "Carl";
-    }
+
+//    @Override
+//    public String getName() {
+//        return "Carl";
+//    }
 
     public String getDiet() {
         return "carnivore";

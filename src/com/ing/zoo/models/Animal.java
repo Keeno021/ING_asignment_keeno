@@ -8,6 +8,9 @@ public class Animal implements IGreeting, IEat, ITrick{
     private String name;
     private String diet;
 
+    public Animal(String name) {
+        this.name = name;
+    }
     public String getName() {
         return name;
     }

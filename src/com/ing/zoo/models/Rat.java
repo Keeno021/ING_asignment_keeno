@@ -6,13 +6,15 @@ import com.ing.zoo.interfaces.IGreeting;
 import java.util.Random;
 
 public class Rat extends Animal implements IGreeting, IEat {
-    public Rat() {
+    public Rat(String name) {
+        super(name);
     }
 
-    @Override
-    public String getName() {
-        return "Spencer";
-    }
+
+//    @Override
+//    public String getName() {
+//        return "Spencer";
+//    }
 
     public String getDiet() {
         return "omnivore";
