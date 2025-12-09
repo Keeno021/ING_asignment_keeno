@@ -39,4 +39,7 @@ public class Animal implements IGreeting, IEat, ITrick{
     @Override
     public void performTrick() {
     }
+
+    @Override
+    public void eat() {}
 }
