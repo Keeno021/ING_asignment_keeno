@@ -1,31 +1,44 @@
 package com.ing.zoo.models;
 
-import com.ing.zoo.interfaces.Greeting;
+import com.ing.zoo.interfaces.IEat;
+import com.ing.zoo.interfaces.IGreeting;
+import com.ing.zoo.interfaces.ITrick;
 
 import java.util.Random;
 
-public class Tiger extends Animal implements Greeting {
-    public String helloText;
-    public String eatText;
+public class Tiger extends Animal implements IGreeting, IEat, ITrick {
     public String trick;
 
     public Tiger() {
     }
 
     @Override
-    public void sayHello()
-    {
-        System.out.println("rraaarww");
+    public String getName() {
+        return "Wally";
     }
 
-    public void eatMeat()
-    {
-        eatText = "nomnomnom oink wubalubadubdub";
-        System.out.println(eatText);
+   @Override
+    public String getDiet() {
+        return "carnivore";
     }
 
-    public void performTrick()
-    {
+    @Override
+    public void sayHello() {
+        System.out.println(getName() + "the Tiger: " +"rraaarwwss");
+    }
+
+
+    @Override
+    public void eatMeat() {
+
+        System.out.println(getName() + "the Tiger: " + "nomnomnom oink wubalubadubdub");
+    }
+
+    @Override
+    public void eatLeaves() {}
+
+    @Override
+    public void performTrick() {
         Random random = new Random();
         int rnd = random.nextInt(2);
         if(rnd == 0)

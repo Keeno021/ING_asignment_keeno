@@ -1,53 +1,68 @@
 package com.ing.zoo;
 
 import com.ing.zoo.models.*;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Zoo {
-    public static void main(String[] args)
-    {
-        String[] commands = new String[4];
-        commands[0] = "hello";
-        commands[1] = "give leaves";
-        commands[2] = "give meat";
-        commands[3] = "perform trick";
+    public static void main(String[] args) {
+        List<Animal> animals = new ArrayList<>();
 
-        Lion henk = new Lion();
-        henk.setName("henk");
-        henk.setDiet("carnivore");
+        animals.add(new Hippo());
+        animals.add(new Lion());
+        animals.add(new Pig());
+        animals.add(new Tiger());
+        animals.add(new Zebra());
 
-        Hippo elsa = new Hippo();
-        elsa.setName("henk");
-        elsa.setDiet("herbivore");
-
-        Pig dora = new Pig();
-        dora.setName("dora");
-        dora.setDiet("carnivore");
-        dora.setDiet("herbivore");
-
-        Tiger wally = new Tiger();
-        wally.setName("wally");
-        wally.setDiet("carnivore");
-
-        Zebra marty = new Zebra();
-        marty.setName("marty");
-        marty.setDiet("herbivore");
+        String[] commands = {"hello", "give leaves", "give meat", "perform trick", "give both"};
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Voer uw command in: ");
+        System.out.print("Insert command: ");
         String input = scanner.nextLine();
 
-        if(input.equals(commands[0] ))
-        {
-            henk.sayHello();
-            elsa.sayHello();
-            dora.sayHello();
-            wally.sayHello();
-            marty.sayHello();
+        if (input.equals(commands[0])) {
+            // hello
+            for (Animal a : animals) {
+                a.sayHello();
+            }
+
+        } else if (input.startsWith("hello ")) {
+            // hello + name of animal(Elsa, Henk, Dora, Wally, Marty)
+            String name = input.substring(6).toLowerCase();
+
+            animals.stream()
+                    .filter(a -> a.getName().equalsIgnoreCase(name))
+                    .findFirst()
+                    .ifPresentOrElse(
+                            Animal::sayHello,
+                            () -> System.out.println("No animal found with name: " + name)
+                    );
+
+        } else if (input.equals(commands[1])) {
+            // give leaves
+            animals.stream()
+                    .filter(a -> "herbivore".equals(a.getDiet()))
+                    .forEach(Animal::eatLeaves);
+
+        } else if (input.equals(commands[2])) {
+            // give meat
+            animals.stream()
+                    .filter(a -> "carnivore".equals(a.getDiet()))
+                    .forEach(Animal::eatMeat);
+
+        } else if (input.equals(commands[3])) {
+            // perform trick
+            animals.forEach(Animal::performTrick);
+
+        } else if(input.equals(commands[4])) {
+            animals.stream()
+                    .filter(a -> "omnivore".equals(a.getDiet()))
+                    .forEach(Animal::eat);
         }
-        else
-        {
-            System.out.println("Unknown command: " + input);
+        else {
+            System.out.println("Unknown command" + input);
         }
     }
 }

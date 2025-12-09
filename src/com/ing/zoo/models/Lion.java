@@ -1,21 +1,30 @@
 package com.ing.zoo.models;
-import com.ing.zoo.interfaces.Eat;
-import com.ing.zoo.interfaces.Greeting;
+import com.ing.zoo.interfaces.IEat;
+import com.ing.zoo.interfaces.IGreeting;
 
-public class Lion extends Animal implements Greeting, Eat {
+public class Lion extends Animal implements IGreeting, IEat {
 
     public Lion() {
     }
 
     @Override
+    public String getName() {
+        return "Henk";
+    }
+
+    public String getDiet() {
+        return "carnivore";
+    }
+
+    @Override
     public void sayHello() {
-        System.out.println("roooaoaaaaar");
+        System.out.println(getName() + " the Lion: " + "roooaoaaaaars");
     }
 
     @Override
     public void eatMeat()
     {
-        System.out.println("nomnomnom thx mate");
+        System.out.println(getName() + " the Lion " +"nomnomnom thx mate");
     }
 
     @Override

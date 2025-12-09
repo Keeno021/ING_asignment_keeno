@@ -1,34 +1,49 @@
 package com.ing.zoo.models;
 
-import com.ing.zoo.interfaces.Greeting;
+import com.ing.zoo.interfaces.IEat;
+import com.ing.zoo.interfaces.IGreeting;
+import com.ing.zoo.interfaces.ITrick;
 
 import java.util.Random;
 
-public class Pig extends Animal implements Greeting {
-    public String helloText;
-    public String eatText;
+public class Pig extends Animal implements IGreeting, IEat, ITrick {
     public String trick;
 
     public Pig() {
     }
 
     @Override
+    public String getName() {
+        return "Dora";
+    }
+
+    @Override
+    public String getDiet() {
+        return "omnivore";
+    }
+
+    @Override
     public void sayHello() {
-        System.out.println("splash");
+        System.out.println(getName() + "the Pig: "+ "splash");
     }
 
-    public void eatLeaves()
-    {
-        eatText = "munch munch oink";
-        System.out.println(eatText);
+    @Override
+    public void eatLeaves() {
+        System.out.println(getName() + "the Pig: "+ "munch munch oink");
     }
 
-    public void eatMeat()
-    {
-        eatText = "nomnomnom oink thx";
-        System.out.println(eatText);
+    @Override
+    public void eatMeat() {
+        System.out.println(getName() + "the Pig: " + "nomnomnom oink thx");
     }
 
+    @Override
+    public void eat() {
+        eatLeaves();
+        eatMeat();
+    }
+
+    @Override
     public void performTrick()
     {
         Random random = new Random();
