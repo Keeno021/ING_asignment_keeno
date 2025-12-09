@@ -1,5 +1,6 @@
 package com.ing.zoo;
 
+import com.ing.zoo.models.*;
 import java.util.Scanner;
 
 public class Zoo {
@@ -12,23 +13,37 @@ public class Zoo {
         commands[3] = "perform trick";
 
         Lion henk = new Lion();
-        henk.name = "henk";
+        henk.setName("henk");
+        henk.setDiet("carnivore");
+
         Hippo elsa = new Hippo();
-        elsa.name = "elsa";
+        elsa.setName("henk");
+        elsa.setDiet("herbivore");
+
         Pig dora = new Pig();
-        dora.name = "dora";
+        dora.setName("dora");
+        dora.setDiet("carnivore");
+        dora.setDiet("herbivore");
+
         Tiger wally = new Tiger();
-        wally.name = "wally";
+        wally.setName("wally");
+        wally.setDiet("carnivore");
+
         Zebra marty = new Zebra();
-        marty.name = "marty";
+        marty.setName("marty");
+        marty.setDiet("herbivore");
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
-
         String input = scanner.nextLine();
-        if(input.equals(commands[0] + " henk"))
+
+        if(input.equals(commands[0] ))
         {
             henk.sayHello();
+            elsa.sayHello();
+            dora.sayHello();
+            wally.sayHello();
+            marty.sayHello();
         }
         else
         {
