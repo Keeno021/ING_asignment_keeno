@@ -15,6 +15,8 @@ public class Zoo {
         animals.add(new Pig());
         animals.add(new Tiger());
         animals.add(new Zebra());
+        animals.add(new Rat());
+        animals.add(new Shark());
 
         String[] commands = {"hello", "give leaves", "give meat", "perform trick", "give both"};
 
