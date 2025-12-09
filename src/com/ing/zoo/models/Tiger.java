@@ -1,21 +1,21 @@
-package com.ing.zoo;
+package com.ing.zoo.models;
+
+import com.ing.zoo.interfaces.Greeting;
 
 import java.util.Random;
 
-public class Tiger {
-    public String name;
+public class Tiger extends Animal implements Greeting {
     public String helloText;
     public String eatText;
     public String trick;
 
-    public Tiger()
-    {
+    public Tiger() {
     }
 
+    @Override
     public void sayHello()
     {
-        helloText = "rraaarww";
-        System.out.println(helloText);
+        System.out.println("rraaarww");
     }
 
     public void eatMeat()
