@@ -1,5 +1,5 @@
 package com.ing.zoo.interfaces;
 
-public interface Greeting {
+public interface IGreeting {
     void sayHello();
 }

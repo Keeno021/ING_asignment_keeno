@@ -1,6 +1,6 @@
 package com.ing.zoo.interfaces;
 
-public interface Eat {
+public interface IEat {
     void eatLeaves();
     void eatMeat();
 }
