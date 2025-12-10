@@ -21,13 +21,13 @@ public class Rat extends Animal implements IGreeting, IEat {
     }
 
     @Override
-    public void sayHello() { System.out.println(getName() + "the Rat: " + "squeeeksqueek");}
+    public void sayHello() { System.out.println(getName() + " the Rat: " + "squeeeksqueek");}
 
     @Override
-    public void eatLeaves() {System.out.println(getName() + "the Rat: " + "seeds seeds seeds lovely");}
+    public void eatLeaves() {System.out.println(getName() + " the Rat: " + "seeds seeds seeds lovely");}
 
     @Override
-    public void eatMeat(){System.out.println(getName() + "the Rat: " + "nom nom nom");}
+    public void eatMeat(){System.out.println(getName() + " the Rat: " + "nom nom nom");}
 
     @Override
     public void performTrick() {

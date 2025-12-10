@@ -26,17 +26,17 @@ public class Pig extends Animal implements IGreeting, IEat, ITrick {
 
     @Override
     public void sayHello() {
-        System.out.println(getName() + "the Pig: "+ "splash");
+        System.out.println(getName() + " the Pig: "+ "splash");
     }
 
     @Override
     public void eatLeaves() {
-        System.out.println(getName() + "the Pig: "+ "munch munch oink");
+        System.out.println(getName() + " the Pig: "+ "munch munch oink");
     }
 
     @Override
     public void eatMeat() {
-        System.out.println(getName() + "the Pig: " + "nomnomnom oink thx");
+        System.out.println(getName() + " the Pig: " + "nomnomnom oink thx");
     }
 
     @Override

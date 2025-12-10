@@ -26,9 +26,11 @@ public class Zoo {
 
         if (input.equals(commands[0])) {
             // hello
-            for (Animal a : animals) {
-                a.sayHello();
-            }
+//            for (Animal a : animals) {
+//                a.sayHello();
+//            }
+            animals.stream()
+                    .forEach(Animal::sayHello);
 
         } else if (input.startsWith("hello ")) {
             // hello + name of animal

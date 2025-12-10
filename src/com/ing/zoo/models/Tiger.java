@@ -26,14 +26,14 @@ public class Tiger extends Animal implements IGreeting, IEat, ITrick {
 
     @Override
     public void sayHello() {
-        System.out.println(getName() + "the Tiger: " +"rraaarwwss");
+        System.out.println(getName() + " the Tiger: " +"rraaarwwss");
     }
 
 
     @Override
     public void eatMeat() {
 
-        System.out.println(getName() + "the Tiger: " + "nomnomnom oink wubalubadubdub");
+        System.out.println(getName() + " the Tiger: " + "nomnomnom oink wubalubadubdub");
     }
 
     @Override

@@ -21,11 +21,11 @@ public class Zebra extends Animal implements IGreeting, IEat {
 
     @Override
     public void sayHello() {
-        System.out.println(getName() + "the Zebra: " + "zebra zebra");
+        System.out.println(getName() + " the Zebra: " + "zebra zebra");
     }
 
     public void eatLeaves() {
-        System.out.println(getName() + "the Zebra: " + "munch munch zank yee bra");
+        System.out.println(getName() + " the Zebra: " + "munch munch zank yee bra");
     }
 
     @Override

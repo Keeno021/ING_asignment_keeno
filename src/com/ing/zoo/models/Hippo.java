@@ -19,10 +19,10 @@ public class Hippo extends Animal implements IGreeting, IEat {
     }
 
     @Override
-    public void sayHello() { System.out.println(getName() + "the Hippo: " + "splash");}
+    public void sayHello() { System.out.println(getName() + " the Hippo: " + "splash");}
 
     @Override
-    public void eatLeaves() {System.out.println(getName() + "the Hippo: " + "munch munch lovely");}
+    public void eatLeaves() {System.out.println(getName() + " the Hippo: " + "munch munch lovely");}
 
     @Override
     public void eatMeat(){}

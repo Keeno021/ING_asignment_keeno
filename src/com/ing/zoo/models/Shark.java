@@ -19,13 +19,13 @@ public class Shark extends Animal implements IGreeting, IEat {
     }
 
     @Override
-    public void sayHello() { System.out.println(getName() + "the Shark: " + "swoooshs");}
+    public void sayHello() { System.out.println(getName() + " the Shark: " + "swoooshs");}
 
     @Override
     public void eatLeaves() {}
 
     @Override
     public void eatMeat(){
-        System.out.println(getName() + "the Shark: " + "swallow swallow");
+        System.out.println(getName() + " the Shark: " + "swallow swallow");
     }
 }
